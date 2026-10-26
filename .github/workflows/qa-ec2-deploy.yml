@@ -8,7 +8,7 @@ on:
 jobs:
     build_and_push_image:
         name: Build and push image
-        runs-on: ubuntu-latest
+        runs-on: [self-hosted, linux, x64]
 
         steps:
             - name: Checkout code
@@ -48,7 +48,7 @@ jobs:
 
     deploy_in_server:
         name: Deploy in server
-        runs-on: ubuntu-latest
+        runs-on: [self-hosted, linux, x64]
         needs: build_and_push_image
 
         steps:

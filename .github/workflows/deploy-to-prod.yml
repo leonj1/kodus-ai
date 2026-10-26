@@ -12,7 +12,7 @@ env:
 
 jobs:
     deploy:
-        runs-on: ubuntu-latest
+        runs-on: [self-hosted, linux, x64]
         steps:
             - name: 🧠 Definir imagem a ser usada
               id: define-image
